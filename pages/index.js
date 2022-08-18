@@ -1,36 +1,15 @@
 import React, { useContext, useEffect } from "react"
 import AOS from "aos";
 import styles from '../styles/Home.module.css'
-
-import axiosInstance from "../config/axiosIntance";
-
 import LandingProduct from "../component/LandingProduct";
 import ProductCard from "../component/ProductCard";
 import { TechTestContext } from "../config/context";
 
 const Home = () => {
   const {product, setProduct} = useContext(TechTestContext);
-  const handleGetProduct = async() => {
-    try{
-      setProduct(prev => {
-        return {...prev, loading:true }
-       })
-      const res = await axiosInstance.get("/Product");
-    
-        setProduct(prev => {
-          return {...prev, products: res.data.records,  loading:false }
-        })
-      
-    }catch(e){
-      setProduct(prev => {
-        return {...prev, loading:false }
-       })
-    }
-   
-
-  }
+  
   useEffect(() => {
-    handleGetProduct();
+    
     AOS.init();
   }, []);
   return (

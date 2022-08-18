@@ -2,7 +2,7 @@
     width: 100%;
     margin-bottom: 10px;
 }
-.products-container{
+.products-container, .gallery-container{
     width: 90%;
     margin: 10px auto;
     display: flex;

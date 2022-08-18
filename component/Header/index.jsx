@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="header-container">
       <Link href={"/"}>
-      <img className="header-logo pointer" src={"/assets/img/Jason Cabral.png"} />
+      <img className="header-logo" src={"/assets/img/Jason Cabral.png"} />
       </Link>
       <div className="header-right">
         <HeaderSearchBar />

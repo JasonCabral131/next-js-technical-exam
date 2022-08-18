@@ -38,6 +38,7 @@
     color: #fff;
     padding: 10px 25px;
     cursor: pointer;
+    width: 250px;
 }
 .shop-btn:hover{
     background-color: #fba2a4;
